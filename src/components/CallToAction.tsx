@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Clock, Users } from "lucide-react";
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const CallToAction = () => {
   return (
     <section className="py-20 hero-bg text-white relative overflow-hidden">
@@ -20,10 +27,16 @@ const CallToAction = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-hero text-lg px-8 py-4">
+              <Button 
+                className="btn-hero text-lg px-8 py-4"
+                onClick={() => scrollToSection('enrollment')}
+              >
                 Start Free Trial
               </Button>
-              <Button className="btn-secondary text-lg px-8 py-4">
+              <Button 
+                className="btn-secondary text-lg px-8 py-4"
+                onClick={() => window.open('mailto:info@certifypro.com?subject=Schedule Consultation', '_blank')}
+              >
                 Schedule Consultation
               </Button>
             </div>

@@ -55,6 +55,108 @@ const EnrollmentSection = () => {
         "Industry Certificate"
       ],
       popular: false
+    },
+    {
+      title: "Cybersecurity Fundamentals",
+      price: "KSH 2,299",
+      originalPrice: "KSH 3,499",
+      duration: "14 weeks",
+      students: "1,500+",
+      rating: 4.9,
+      features: [
+        "Network Security",
+        "Ethical Hacking Basics",
+        "Risk Assessment",
+        "Security Compliance",
+        "Incident Response",
+        "Industry Certificate"
+      ],
+      popular: false
+    },
+    {
+      title: "Cloud Computing (AWS)",
+      price: "KSH 2,099",
+      originalPrice: "KSH 3,199",
+      duration: "12 weeks",
+      students: "2,100+",
+      rating: 4.8,
+      features: [
+        "AWS Core Services",
+        "Cloud Architecture",
+        "DevOps Integration",
+        "Cost Optimization",
+        "Hands-on Labs",
+        "AWS Certification Prep"
+      ],
+      popular: false
+    },
+    {
+      title: "UI/UX Design Professional",
+      price: "KSH 1,899",
+      originalPrice: "KSH 2,799",
+      duration: "10 weeks",
+      students: "2,800+",
+      rating: 4.7,
+      features: [
+        "Figma & Adobe XD",
+        "User Research Methods",
+        "Wireframing & Prototyping",
+        "Design Systems",
+        "Portfolio Development",
+        "Industry Certificate"
+      ],
+      popular: false
+    },
+    {
+      title: "Financial Analysis & Modeling",
+      price: "KSH 2,199",
+      originalPrice: "KSH 3,299",
+      duration: "8 weeks",
+      students: "1,600+",
+      rating: 4.8,
+      features: [
+        "Excel Advanced Functions",
+        "Financial Modeling",
+        "Investment Analysis",
+        "Risk Management",
+        "PowerBI for Finance",
+        "Industry Certificate"
+      ],
+      popular: false
+    },
+    {
+      title: "Web Development Bootcamp",
+      price: "KSH 2,399",
+      originalPrice: "KSH 3,599",
+      duration: "16 weeks",
+      students: "3,500+",
+      rating: 4.9,
+      features: [
+        "HTML, CSS, JavaScript",
+        "React & Node.js",
+        "Database Management",
+        "API Development",
+        "Portfolio Projects",
+        "Industry Certificate"
+      ],
+      popular: false
+    },
+    {
+      title: "Business Analytics",
+      price: "KSH 1,799",
+      originalPrice: "KSH 2,699",
+      duration: "9 weeks",
+      students: "2,200+",
+      rating: 4.7,
+      features: [
+        "Excel & Power Query",
+        "Business Intelligence",
+        "Data Visualization",
+        "Statistical Analysis",
+        "KPI Development",
+        "Industry Certificate"
+      ],
+      popular: false
     }
   ];
 
@@ -65,7 +167,7 @@ const EnrollmentSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/20 to-white">
+    <section id="enrollment" className="py-20 bg-gradient-to-b from-muted/20 to-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -83,7 +185,7 @@ const EnrollmentSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {courses.map((course, index) => (
-            <Card key={index} className={`card-professional hover-lift relative overflow-hidden ${
+            <Card key={index} className={`card-professional hover-lift relative overflow-hidden h-full ${
               course.popular ? 'ring-2 ring-primary shadow-[var(--shadow-glow)]' : ''
             }`}>
               {course.popular && (

@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-training.jpg";
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const Hero = () => {
   return (
     <section className="hero-bg text-white py-20 lg:py-32 relative overflow-hidden">
@@ -20,10 +27,16 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-hero text-lg">
+              <Button 
+                className="btn-hero text-lg"
+                onClick={() => scrollToSection('enrollment')}
+              >
                 Start Your Journey
               </Button>
-              <Button className="btn-secondary text-lg">
+              <Button 
+                className="btn-secondary text-lg"
+                onClick={() => scrollToSection('programs')}
+              >
                 View Programs
               </Button>
             </div>
